@@ -4,7 +4,7 @@ Hello team! Here's the weekend project 8.
 
 We're going to build a hit parade.
 
-![WKP8/hit-parade.jpg](WKP8/hit-parade.jpg)
+![./assets/hit-parade.jpg](./assets/hit-parade.jpg)
 
 -   That's a list of songs, sorted from the most popular to the least popular.
 -   When we add a new song to the hit parade, the song score is set to zero.
