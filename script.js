@@ -18,10 +18,8 @@ const listOfSong = () => {
                         <span>${song.name}</span>
                         <small>${song.length}</small>
                     </div>
-                    <div class="score">
-                        <span>Score: </span>
-                        <button class="updateScore">+1</button>
-                    </div>
+                    <span>Score: </span>
+                    <button class="updateScore">+1</button>
                     <button class="delete">
                         <img src="./assets/trash.svg" alt="">
                     </button>
@@ -69,6 +67,9 @@ const updateNewLocalStorageSong = () => {
     // Stringify the object inside of an array
     localStorage.setItem('songs', JSON.stringify(songs));
 };
+
+
+// const 
 
 // Listen to the event when submitting the form
 formSong.addEventListener('submit', handleSubmitBtn);
