@@ -34,6 +34,8 @@ const listOfSong = () => {
 
 const handleSubmitBtn = e => {
     e.preventDefault();
+
+    // Take the value from each input in the form
     const form = e.currentTarget;
     const newSong = {
         title: form.title.value,
@@ -44,10 +46,36 @@ const handleSubmitBtn = e => {
         id: Date.now(),
     }
 
+    // push the new values from the form into the original array
     songs.push(newSong);
-    listOfSong();
-    form.reset();
+    songList.dispatchEvent(new CustomEvent('updateNewSong'));
+    // listOfSong();
+    form.reset(); // reset the form after submit the result
 }
 
+// Create a local storage to store
+const songLocalStorage = () => {
+    // get the original array
+    const songLst = JSON.parse(localStorage.getItem('songs'));
 
+    // if there is value inside of the object then return it
+    if (songLst) {
+        songs = songLst;
+    }
+    songList.dispatchEvent(new CustomEvent('updateNewSong'));
+}
+
+const updateNewLocalStorageSong = () => {
+    // Stringify the object inside of an array
+    localStorage.setItem('songs', JSON.stringify(songs));
+};
+
+// Listen to the event when submitting the form
 formSong.addEventListener('submit', handleSubmitBtn);
+// listen to the dispatch event 
+songList.addEventListener('updateNewSong', listOfSong);
+songList.addEventListener('updateNewSong', updateNewLocalStorageSong);
+
+
+
+songLocalStorage();
