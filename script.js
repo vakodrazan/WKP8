@@ -19,8 +19,16 @@ const listOfSong = () => {
                         <small>${song.length}</small>
                     </div>
                     <span>Score: </span>
-                    <button class="updateScore">+1</button>
-                    <button class="delete">
+                    <button 
+                        data-id="${song.id}" 
+                        aria-label="Update the score of the song ${song.title} by the artist ${song.name}" 
+                        class="updateScore"
+                    >+1
+                    </button>
+                    <button 
+                        data-id="${song.id}" 
+                        aria-label="Delete song ${song.title} by the artist ${song.name}" 
+                        class="delete">
                         <img src="./assets/trash.svg" alt="">
                     </button>
                 </div>
@@ -68,8 +76,22 @@ const updateNewLocalStorageSong = () => {
     localStorage.setItem('songs', JSON.stringify(songs));
 };
 
+
 const handleClickBtns = e =>{
-    console.log("hello")
+    const deleteBtn = e.target.closest("button.delete");
+    
+    // Make sure that the id is a number then remove it
+    if (deleteBtn) {
+        const id = Number(deleteBtn.dataset.id);
+        deleteSong(id)
+    }
+}
+
+const deleteSong = id => {
+    // check if the the id is equal to id then delete if not just leave it there
+    songs = songs.filter(song => song.id !== id);
+    songList.dispatchEvent(new CustomEvent('updateNewSong'));
+    console.log("I've been deleted", id);
 }
 
 // Listen to the event when submitting the form
