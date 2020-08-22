@@ -57,7 +57,7 @@ fieldset > button {
 .artist {
     display: grid;
 	justify-items: center;
-    grid-template-columns: 20% 20% 20% 25% 15%;
+    grid-template-columns: 20% 20% 20% 20% 10% 10%;
     padding-block-end: 0.7rem;
 }
 span {
@@ -72,9 +72,6 @@ span {
     padding-block-end: 0.5rem;
 }
 
-.score > span{
-    padding-inline-end: 1rem;
-}
 .artist button {
     padding: 0.6rem;
 }
@@ -85,6 +82,7 @@ span {
     border: none;
 }
 
+.updateScore,
 .delete {
     max-height: 2.5rem;
 }
