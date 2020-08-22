@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wkp8: Hit Parade</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        
+        <header>
+            <h2>
+                Hit parade
+            </h2>
+        </header>
+        <main>
+
+            <section class="addSong">
+                <h3>Add a song</h3>
+
+                <form>
+                    <fieldset>
+                        <label for="title">Song title</label>
+                        <input type="text" name="title" id="title">
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="name">Artist name</label>
+                        <input type="text" name="name" id="name">
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="style">Song style</label>
+                        <select name="style" id="style">
+                            <option value="Pop">Pop</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Hip hop">Hip hop</option>
+                            <option value="Jazz">Jazz</option>
+                            <option value="Country">Country</option>
+                            <option value="Folk">Folk</option>
+                            <option value="Reggae">Reggae</option>
+                            <option value="Gospel">Gospel</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="length">Song length</label>
+                        <input type="text" name="length" id="length">
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="picture">Artist picture</label>
+                        <input type="url" name="picture" id="picture">
+                    </fieldset>
+                    <fieldset>
+                        <button>Add</button>
+                    </fieldset>
+                </form>
+            </section>
+
+            <section class="list">
+            </section>
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>
