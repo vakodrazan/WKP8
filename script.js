@@ -68,15 +68,16 @@ const updateNewLocalStorageSong = () => {
     localStorage.setItem('songs', JSON.stringify(songs));
 };
 
-
-// const 
+const handleClickBtns = e =>{
+    console.log("hello")
+}
 
 // Listen to the event when submitting the form
 formSong.addEventListener('submit', handleSubmitBtn);
 // listen to the dispatch event 
 songList.addEventListener('updateNewSong', listOfSong);
 songList.addEventListener('updateNewSong', updateNewLocalStorageSong);
-
+songList.addEventListener('click', handleClickBtns);
 
 
 songLocalStorage();
