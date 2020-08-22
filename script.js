@@ -49,7 +49,7 @@ const handleSubmitBtn = e => {
         style: form.style.value,
         length: form.length.value,
         picture: form.picture.value,
-        score: 1,
+        score: 0,
         id: Date.now(),
     }
 
@@ -95,13 +95,12 @@ const handleClickBtns = e =>{
 
 const updateScore = id => {
     const songScore = songs.find(song => song.id === id);
-    songs.reduce((acc, arr) => {
-        if (songScore.score) {
-            songScore.score += 1;
-        }
-    }, 1) 
-    
-    
+    // songs.reduce((acc, arr) => {
+    //     if (acc[arr.score]) {
+    //         acc[arr.score] = acc[arr.score]++;
+    //     }
+    // }, {}) 
+
     console.log(songScore)
 }
 
