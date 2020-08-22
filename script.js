@@ -1,32 +1,8 @@
-let songs = [
-    {
-        title: "Burn Ship",
-        name: "For King and Country",
-        style: 'Pop',
-        length: "‎3min 40sec",
-        picture: 'https://bit.ly/2QdMqcK',
-        id: 1598075205144,
-    },
-    {
-        title: "Everything",
-        name: "TobyMack",
-        style: 'Gospel',
-        length: "3min 21sec",
-        picture: 'https://bit.ly/3hnoFuT',
-        id: 1598076404946,
-    },
-    {
-        title: "God only knows",
-        name: "For King and Country",
-        style: 'Pop',
-        length: "3min 49sec",
-        picture: 'https://bit.ly/3lfvb9B',
-        id: 1598076425391,
-    },
-];
+let songs = [];
 
 
 const songList = document.querySelector('.list');
+const formSong = document.querySelector('.formSong');
 
 const listOfSong = () => {
     const myHtml = songs
@@ -56,4 +32,22 @@ const listOfSong = () => {
     songList.innerHTML = myHtml;
 }
 
-listOfSong();
+const handleSubmitBtn = e => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const newSong = {
+        title: form.title.value,
+        name: form.name.value,
+        style: form.style.value,
+        length: form.length.value,
+        picture: form.picture.value,
+        id: Date.now(),
+    }
+
+    songs.push(newSong);
+    listOfSong();
+    form.reset();
+}
+
+
+formSong.addEventListener('submit', handleSubmitBtn);
