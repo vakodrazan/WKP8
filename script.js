@@ -18,7 +18,7 @@ const listOfSong = () => {
                         <span>${song.name}</span>
                         <small>${song.length}</small>
                     </div>
-                    <span>Score: </span>
+                    <span>Score: ${song.score}</span>
                     <button 
                         data-id="${song.id}" 
                         aria-label="Update the score of the song ${song.title} by the artist ${song.name}" 
@@ -49,6 +49,7 @@ const handleSubmitBtn = e => {
         style: form.style.value,
         length: form.length.value,
         picture: form.picture.value,
+        score: 1,
         id: Date.now(),
     }
 
@@ -63,7 +64,6 @@ const handleSubmitBtn = e => {
 const songLocalStorage = () => {
     // get the original array
     const songLst = JSON.parse(localStorage.getItem('songs'));
-
     // if there is value inside of the object then return it
     if (songLst) {
         songs = songLst;
@@ -78,8 +78,14 @@ const updateNewLocalStorageSong = () => {
 
 
 const handleClickBtns = e =>{
+    // Update the score of the artist when clicking +1 button
+    const updateScoreBtn = e.target.closest('button.updateScore');
+    if (updateScoreBtn) {
+        const id = Number(updateScoreBtn.dataset.id)
+        updateScore(id);
+    }
+
     const deleteBtn = e.target.closest("button.delete");
-    
     // Make sure that the id is a number then remove it
     if (deleteBtn) {
         const id = Number(deleteBtn.dataset.id);
@@ -87,11 +93,22 @@ const handleClickBtns = e =>{
     }
 }
 
-const deleteSong = id => {
+const updateScore = id => {
+    const songScore = songs.find(song => song.id === id);
+    songs.reduce((acc, arr) => {
+        if (songScore.score) {
+            songScore.score += 1;
+        }
+    }, 1) 
+    
+    
+    console.log(songScore)
+}
+
+const deleteSong = idDeleteSong => {
     // check if the the id is equal to id then delete if not just leave it there
-    songs = songs.filter(song => song.id !== id);
+    songs = songs.filter(song => song.id !== idDeleteSong);
     songList.dispatchEvent(new CustomEvent('updateNewSong'));
-    console.log("I've been deleted", id);
 }
 
 // Listen to the event when submitting the form
