@@ -28,15 +28,45 @@ Also, please update this readme with the answer to those questions before submit
 
 1. In a few sentences, explain the structure of your project.
 
+#### Structure of my project:
+
+ - First of all, create an empty array that will contain the object.
+ - I created a form elements, and listen to the submit event.
+ - When clicking the submit button, add the value of the form into an html element.
+ - Map through each object in the array.
+ - Store the result in the local storage using `dispatchEvent`.
+
 2. If you had more time, what area of your project would you improve?
+
+#### Any area need to improve:
+
+ - If I had more time, I would work on the score update.
+ - Also, I would try my best to finish the last steps which are filtering the element when search in the search input and reset the search field.
 
 3. Did you learn anything new while working on this project?
 
+#### Anything new while working on this project:
+ - In this project, I understand more how to use the `dispatchEvent`.
+ - Storing the result in the local storage
+
 4. What was the most challenging part for you?
+
+#### The most challenging part I faced:
+
+ - I try to manage how to get the score updated but I could not solve it. I spent most of my time trying to work on it but still, it didn't work. 
 
 5. Would you like a new explanation about a specific topic?
 
+#### More explanation
+
+ - I would like to have more explanation of the update score.
+
 6. Any other comments?
+
+#### What's more:
+
+ - I'm really sorry that I couldn't even touch anyone of the filter list and reset button.
+ - Also, I couldn't get the score update.
 
 Fork this project and then clone your fork to your computer.
 
