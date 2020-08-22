@@ -1,0 +1,90 @@
+body {
+    background-color: rgb(212, 209, 209);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 0.6fr 2fr;
+    padding: 4rem 2rem;
+	margin: 0 auto;
+	max-width: 1200px;
+	gap: 25px;
+}
+
+section {
+    border-radius: .5rem;
+    padding: 1rem;
+    background-color: white;
+}
+
+.addSong {
+    
+    width: 230px;
+    padding-block-end: 2rem;
+    padding-block-end: 2rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+.addSong > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border-radius: 5px;
+}
+
+fieldset > button {
+    border: none;
+	background-color: blue;
+	color: white;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 0.6rem 2rem;
+	cursor: pointer;
+}
+
+.artist {
+    display: grid;
+	justify-items: center;
+    grid-template-columns: 20% 20% 20% 25% 15%;
+    padding-block-end: 0.7rem;
+}
+span {
+    margin: 0;
+}
+.musician {
+    display: flex;
+    flex-direction: column;
+}
+
+.musician > span {
+    padding-block-end: 0.5rem;
+}
+
+.score > span{
+    padding-inline-end: 1rem;
+}
+.artist button {
+    padding: 0.6rem;
+}
+
+.updateScore {
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+.delete {
+    max-height: 2.5rem;
+}
