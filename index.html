@@ -12,7 +12,22 @@
             <h2>
                 Hit parade
             </h2>
+            <form>
+                <fieldset>
+                    <label for="searchTitle">Search a song</label>
+                    <input type="text" name="searchTitle" id="searchTitle" placeholder="Enter a song title" required>
+                </fieldset>
+                
+                <fieldset>
+                    <label for="searchStyle">Search a style</label>
+                    <input type="text" name="searchStyle" id="searchStyle" placeholder="All style" required>
+                </fieldset>
+                <fieldset>
+                    <button>Reset filters</button>
+                </fieldset>
+            </form>
         </header>
+
         <main>
 
             <section class="addSong">
@@ -21,12 +36,12 @@
                 <form class="formSong">
                     <fieldset>
                         <label for="title">Song title</label>
-                        <input type="text" name="title" id="title" required>
+                        <input type="text" name="title" id="title" placeholder="Title" required>
                     </fieldset>
 
                     <fieldset>
                         <label for="name">Artist name</label>
-                        <input type="text" name="name" id="name" required>
+                        <input type="text" name="name" id="name" placeholder="Artist Name" required>
                     </fieldset>
 
                     <fieldset>
@@ -46,12 +61,12 @@
 
                     <fieldset>
                         <label for="length">Song length</label>
-                        <input type="text" name="length" id="length" required>
+                        <input type="text" name="length" id="length" placeholder="Length" required>
                     </fieldset>
 
                     <fieldset>
                         <label for="picture">Artist picture</label>
-                        <input type="url" name="picture" id="picture" required>
+                        <input type="url" name="picture" id="picture" placeholder="Url of an artist pic" required>
                     </fieldset>
                     <fieldset>
                         <button>Add</button>
@@ -59,8 +74,7 @@
                 </form>
             </section>
 
-            <section class="list">
-            </section>
+            <section class="list"></section>
         </main>
         <script src="./script.js"></script>
     </body>
