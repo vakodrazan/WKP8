@@ -81,7 +81,7 @@ const handleClickBtns = e =>{
     // Update the score of the artist when clicking +1 button
     const updateScoreBtn = e.target.closest('button.updateScore');
     if (updateScoreBtn) {
-        const id = Number(updateScoreBtn.dataset.id)
+        const id = Number(updateScoreBtn.dataset.id);
         updateScore(id);
     }
 
@@ -95,13 +95,8 @@ const handleClickBtns = e =>{
 
 const updateScore = id => {
     const songScore = songs.find(song => song.id === id);
-    // songs.reduce((acc, arr) => {
-    //     if (acc[arr.score]) {
-    //         acc[arr.score] = acc[arr.score]++;
-    //     }
-    // }, {}) 
-
-    console.log(songScore)
+    songScore.score ++;
+    songList.dispatchEvent(new CustomEvent('updateNewSong'));
 }
 
 const deleteSong = idDeleteSong => {
