@@ -68,8 +68,14 @@ const songLocalStorage = () => {
     if (songLst) {
         songs = songLst;
     }
+
+    // sort the list from the highest score to the lowest score
+    songLst.sort(function(a, b) {
+        return b.score - a.score;
+    })
     songList.dispatchEvent(new CustomEvent('updateNewSong'));
 }
+
 
 const updateNewLocalStorageSong = () => {
     // Stringify the object inside of an array
@@ -104,6 +110,7 @@ const deleteSong = idDeleteSong => {
     songs = songs.filter(song => song.id !== idDeleteSong);
     songList.dispatchEvent(new CustomEvent('updateNewSong'));
 }
+
 
 // Listen to the event when submitting the form
 formSong.addEventListener('submit', handleSubmitBtn);
