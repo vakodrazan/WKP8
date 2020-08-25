@@ -35,13 +35,16 @@ Also, please update this readme with the answer to those questions before submit
  - When clicking the submit button, add the value of the form into an html element.
  - Map through each object in the array.
  - Store the result in the local storage using `dispatchEvent`.
+ - Update the score every time clicking the `+1` button.
+ - Then sort the list from the highest to the lowest score they have.
  
 2. If you had more time, what area of your project would you improve?
  
 #### Any area need to improve:
  
- - If I had more time, I would work on the score update.
+ <!-- - If I had more time, I would work on the score update. -->
  - Also, I would try my best to finish the last steps which are filtering the element when searching in the search input and reset the search field.
+ - I worked on the sorting list but to get it works we need to refresh, I don't know what causing that problem
  
 3. Did you learn anything new while working on this project?
  
@@ -53,14 +56,11 @@ Also, please update this readme with the answer to those questions before submit
  
 #### The most challenging part I faced:
  
- - I try to manage how to get the score updated but I could not solve it. I spent most of my time trying to work on it but still, it didn't work. 
+ <!-- - I try to manage how to get the score updated but I could not solve it. I spent most of my time trying to work on it but still, it didn't work.  -->
+ - I tried to work on the search list but I couldn't manage to get it done.
  
 5. Would you like a new explanation about a specific topic?
- 
-#### More explanation
- 
- - I would like to have more explanation of the update score.
- 
+
 6. Any other comments?
  
 #### What's more:
