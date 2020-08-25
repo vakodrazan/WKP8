@@ -15,12 +15,22 @@
             <form>
                 <fieldset>
                     <label for="searchTitle">Search a song</label>
-                    <input type="text" name="searchTitle" id="searchTitle" placeholder="Enter a song title" required>
+                    <input type="text" name="searchTitle" id="searchTitle" placeholder="Enter a song title">
                 </fieldset>
                 
                 <fieldset>
                     <label for="searchStyle">Search a style</label>
-                    <input type="text" name="searchStyle" id="searchStyle" placeholder="All style" required>
+                    <select name="searchStyle" id="searchStyle">
+                        <option value="Pop">Pop</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Hip hop">Hip hop</option>
+                        <option value="Jazz">Jazz</option>
+                        <option value="Country">Country</option>
+                        <option value="Folk">Folk</option>
+                        <option value="Reggae">Reggae</option>
+                        <option value="Gospel">Gospel</option>
+                        <option value="Other">Other</option>
+                    </select>
                 </fieldset>
                 <fieldset>
                     <button>Reset filters</button>
