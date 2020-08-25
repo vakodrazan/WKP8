@@ -112,6 +112,15 @@ const deleteSong = idDeleteSong => {
 }
 
 
+// filter the list when searching the input
+const filterSong = () => {
+    const searchTitle = document.querySelector("input#searchTitle");
+    let filter = searchTitle.value.toUpperCase();
+    console.log(filter)
+}
+
+filterSong();
+
 // Listen to the event when submitting the form
 formSong.addEventListener('submit', handleSubmitBtn);
 // listen to the dispatch event 
