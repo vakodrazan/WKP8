@@ -116,7 +116,7 @@ const deleteSong = idDeleteSong => {
 const filterSong = () => {
     const searchTitle = document.querySelector("input#searchTitle");
     let filter = searchTitle.value.toUpperCase();
-    console.log(filter)
+    let article = songs.find(song => song.id);
 }
 
 filterSong();
